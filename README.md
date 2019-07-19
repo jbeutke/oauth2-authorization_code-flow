@@ -13,7 +13,7 @@ git clone https://github.com/jbeutke/oauth2-authorization_code-flow.git
    ```
     const Authorization_Endpoint = `http://localhost:8080/web/authorize`;
     const Response_Type = 'code';
-    const Client_Id = process.env.CLIENT_ID;
+    const Client_Id = 'test_client_1';
     const Redirect_Uri = 'http://localhost:8000/give/me/the/code';
     const Scope = 'read';
     const State = 'ThisIsMyStateValue';
@@ -29,6 +29,8 @@ git clone https://github.com/jbeutke/oauth2-authorization_code-flow.git
     const Code = req.body.code;
     const Redirect_Uri = 'http://localhost:8000/give/me/the/code';
     const Scope = 'read';
+    const CLIENT_ID = 'test_client_1';
+    const CLIENT_SECRET = 'test_secret';
     
     Estos son los parametros que requiere el Authorization Server para cambiar el codigo de autorizacion por un  access_token. En base a estos parametros se armara un request para solicitarlo.
 
